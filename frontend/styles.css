@@ -1,0 +1,26 @@
+*{box-sizing:border-box;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}
+:root{--bg:#f5f7fb;--card:#fff;--primary:#2563eb;--muted:#6b7280;--danger:#ef4444}
+html,body,#app{height:100%}
+body{background:linear-gradient(180deg,#eef2ff 0%,#f8fafc 100%);display:flex;align-items:center;justify-content:center;padding:24px}
+.container{width:100%;max-width:420px}
+.card{background:var(--card);border-radius:12px;padding:20px;box-shadow:0 8px 30px rgba(2,6,23,.08)}
+.tabs{display:flex;border-radius:8px;overflow:hidden;margin-bottom:14px}
+.tab{flex:1;padding:10px 12px;border:none;background:transparent;cursor:pointer;font-weight:600;color:var(--muted)}
+.tab.active{background:linear-gradient(90deg,rgba(37,99,235,.1),rgba(37,99,235,.04));color:var(--primary)}
+.panel{padding:8px 2px}
+.field{margin-bottom:12px}
+label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+input[type=text],input[type=email],input[type=password]{width:100%;padding:10px 12px;border-radius:8px;border:1px solid #e6e9ef;background:#fbfdff}
+.passwordWrap{display:flex;gap:8px}
+.passwordWrap .togglePwd{padding:8px 10px;border-radius:8px;border:1px solid #e6e9ef;background:#fff;cursor:pointer}
+.btn{padding:10px 14px;border-radius:8px;border:none;cursor:pointer}
+.btn.primary{background:var(--primary);color:#fff}
+.actions{display:flex;gap:8px;align-items:center}
+.actions.vertical{flex-direction:column;align-items:stretch}
+.link{background:none;border:none;color:var(--primary);cursor:pointer}
+.checkbox{font-size:13px;color:var(--muted)}
+.error{color:var(--danger);font-size:12px;height:16px;margin-top:6px}
+.hidden{display:none}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:26px;background:#111;color:#fff;padding:10px 16px;border-radius:10px;box-shadow:0 6px 20px rgba(2,6,23,.2)}
+meter{width:100%;height:8px;margin-top:6px}
+.hint{font-size:12px;color:var(--muted);margin-top:6px}

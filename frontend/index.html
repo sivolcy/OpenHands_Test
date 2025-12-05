@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>注册 / 登录 - OpenHands</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="card">
+      <div class="tabs">
+        <button id="loginTab" class="tab active">登录</button>
+        <button id="registerTab" class="tab">注册</button>
+      </div>
+
+      <section id="loginPanel" class="panel">
+        <form id="loginForm" novalidate>
+          <div class="field">
+            <label for="loginEmail">邮箱 / 用户名</label>
+            <input id="loginEmail" name="loginEmail" type="text" placeholder="请输入邮箱或用户名" required />
+            <div class="error" data-for="loginEmail"></div>
+          </div>
+
+          <div class="field">
+            <label for="loginPassword">密码</label>
+            <div class="passwordWrap">
+              <input id="loginPassword" name="loginPassword" type="password" placeholder="请输入密码" required />
+              <button type="button" class="togglePwd" data-target="loginPassword">显示</button>
+            </div>
+            <div class="error" data-for="loginPassword"></div>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn primary">登录</button>
+            <button type="button" id="forgotBtn" class="link">忘记密码?</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="registerPanel" class="panel hidden">
+        <form id="registerForm" novalidate>
+          <div class="field">
+            <label for="regName">用户名</label>
+            <input id="regName" name="regName" type="text" placeholder="取一个好听的用户名" required minlength="3" />
+            <div class="error" data-for="regName"></div>
+          </div>
+
+          <div class="field">
+            <label for="regEmail">邮箱</label>
+            <input id="regEmail" name="regEmail" type="email" placeholder="输入常用邮箱" required />
+            <div class="error" data-for="regEmail"></div>
+          </div>
+
+          <div class="field">
+            <label for="regPassword">密码</label>
+            <div class="passwordWrap">
+              <input id="regPassword" name="regPassword" type="password" placeholder="至少8位，包含大小写和数字" required minlength="8" />
+              <button type="button" class="togglePwd" data-target="regPassword">显示</button>
+            </div>
+            <meter id="pwdStrength" min="0" max="4" value="0"></meter>
+            <div class="hint">密码强度: <span id="pwdLabel">很弱</span></div>
+            <div class="error" data-for="regPassword"></div>
+          </div>
+
+          <div class="field">
+            <label for="regConfirm">确认密码</label>
+            <input id="regConfirm" name="regConfirm" type="password" placeholder="再次输入密码" required />
+            <div class="error" data-for="regConfirm"></div>
+          </div>
+
+          <div class="actions vertical">
+            <label class="checkbox"><input id="agree" type="checkbox" required /> 我已阅读并同意 用户协议 与 隐私政策</label>
+            <button type="submit" class="btn primary">创建账户</button>
+          </div>
+        </form>
+      </section>
+
+      <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
